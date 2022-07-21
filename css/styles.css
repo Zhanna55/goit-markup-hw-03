@@ -34,13 +34,17 @@ ul {
   margin: 0;
   padding: 0;
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 .container {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 2px solid tomato;
 }
 /* -----------------------------header---------------------------*/
 header {
@@ -137,8 +141,9 @@ header {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: #ffffff;
-
-  margin-bottom: 30px;
+  border-radius: 4px;
+  max-width: 696px;
+  margin: 0 auto 30px;
 }
 .button {
   background-color: var(--button-bg-color);
@@ -178,10 +183,10 @@ button:focus {
 }
 .features-list {
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
 }
 .features-item {
-  width: 270px;
+  flex-basis: calc((100% - 90px) / 4);
 }
 .features-title {
   font-size: 14px;
@@ -215,9 +220,10 @@ button:focus {
 }
 .works-list {
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
 }
 .works-item {
+  flex-basis: calc((100% - 60px) / 3);
 }
 /* ------------------------------team-------------------------*/
 
@@ -236,11 +242,15 @@ button:focus {
 }
 .team-list {
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
 }
 .team-item {
   background-color: var(--primary-bg-color);
   text-align: center;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  flex-basis: calc((100% - 90px) / 4);
 }
 .team-item-title {
   font-size: 16px;
@@ -299,6 +309,7 @@ button:focus {
 .menu-list {
   display: flex;
   justify-content: center;
+  gap: 8px;
 }
 
 .menu-list-item {
@@ -311,23 +322,40 @@ button:focus {
   letter-spacing: 0.03em;
   cursor: pointer;
   color: var(--title-text-color);
+
+  padding: 6px 22px;
+  margin-bottom: 50px;
+  border-radius: 4px;
+  border: none;
 }
 .menu-list-item:hover,
 .menu-list-item:focus {
   background-color: #2196f3;
   color: var(--button-color);
 }
+
 .projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 .projects-list-item {
+  flex-basis: calc((100% - 60px) / 3);
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
 }
-
+.project-card {
+  padding: 20px 24px;
+}
 .projects-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-text-color);
+
+  margin-bottom: 4px;
 }
 .projects-text {
   font-size: 16px;
